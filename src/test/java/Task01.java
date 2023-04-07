@@ -28,7 +28,7 @@ public class Task01 extends TestBase {
 
         //6. Enter name and email address
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys("istanbul");
-        driver.findElement(By.xpath("//input[@data-qa='signup-email']")).sendKeys("blueMosque@hotmail.com");
+        driver.findElement(By.xpath("//input[@data-qa='signup-email']")).sendKeys("istanbul@evim.com");
 
         //7. Click 'Signup' button
         driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
@@ -40,7 +40,7 @@ public class Task01 extends TestBase {
 
         //9. Fill details: Title, Name, Email, Password, Date of birth
         driver.findElement(By.id("id_gender2")).click();
-        driver.findElement(By.id("password")).sendKeys("123456");
+        driver.findElement(By.id("password")).sendKeys("12345");
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.TAB).sendKeys("12")
                 .sendKeys(Keys.TAB).sendKeys("March").
@@ -79,5 +79,10 @@ public class Task01 extends TestBase {
        //16. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
         WebElement delete = driver.findElement(By.xpath("//b"));
         assertTrue(delete.isDisplayed());
+
+
+
+
+
     }
 }

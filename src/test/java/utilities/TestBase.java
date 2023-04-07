@@ -34,7 +34,7 @@ public abstract class TestBase {
     @After
     public void tearDown() throws Exception {
         wait(3);
-        driver.close();
+      //  driver.close();
     }
     //HARD WAIT METHOD
     public static void wait(int second)  {
