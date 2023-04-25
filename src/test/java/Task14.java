@@ -3,24 +3,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.TestBase;
 
 import java.awt.*;
-import java.time.Duration;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class Task_14 extends TestBase {
+public class Task14 extends TestBase {
     @Test
     public void test01() throws AWTException {
 //        1. Launch browser
 //        2. Navigate to url 'http://automationexercise.com'
         driver.navigate().to("http://automationexercise.com");
+
 //        3. Verify that home page is visible successfully
-        driver.findElement(By.xpath("//html")).click();
+      WebElement homePage =  driver.findElement(By.xpath("//html"));
+        assertTrue(homePage.isDisplayed());
 //        4. Add products to cart
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN).perform();
