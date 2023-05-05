@@ -13,9 +13,6 @@ public class Task11 extends TestBase {
         ////2. Navigate to url 'http://automationexercise.com'
         driver.get("http://automationexercise.com");
 
-        ////1. Launch browser
-
-
         ////3. Verify that home page is visible successfully
         String title = driver.getTitle();
         assertTrue(title.contains("Automation"));

@@ -80,6 +80,7 @@ public class Task01 extends TestBase {
         WebElement delete = driver.findElement(By.xpath("//b"));
         assertTrue(delete.isDisplayed());
 
+        driver.findElement(By.linkText("Continue")).click();
 
 
 
